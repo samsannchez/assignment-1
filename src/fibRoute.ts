@@ -1,5 +1,5 @@
 // Endpoint for querying the fibonacci numbers
-
+import { Request, Response } from 'express';
 import fibonacci from "./fib";
 
 export default (req, res) => {
