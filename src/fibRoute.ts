@@ -12,12 +12,8 @@ export default (req: Request, res: Response): void => {
     return;
   }
 
-  const fibN = fibonacci(parseInt(num));
-  let result = `fibonacci(${num}) is ${fibN}`;
-
-  if (fibN < 0) {
-    result = `fibonacci(${num}) is undefined`;
-  }
+  const fibN: number = fibonacci(parsedNum);
+  const result: string = fibN < 0 ? `fibonacci(${parsedNum}) is undefined` : `fibonacci(${parsedNum}) is ${fibN}`;
 
   res.send(result);
 };
